@@ -6,18 +6,24 @@ const dataload = async (searchPhone) =>{
 }
 
 const displayData = phones =>{
-    const noPhoneAlrt = document.getElementById('no-phoneAlrt"');
-  // if(phones.langth === 0){
-  //   noPhoneAlrt.classList.remove('d-none')
-  // }
-  // else{
-  //   noPhoneAlrt.classList.add('d-none')
-  // }
+   
+ 
   
     const phoneContaner = document.getElementById('phone-Contaner');
     phoneContaner.innerText = '';
 
     phones = phones.slice(0, 10);
+
+
+    //no phone found
+    const noPhoneAlrt = document.getElementById('no-phoneAlrt');
+      if(phones.length === 0){
+      noPhoneAlrt.classList.remove('d-none')
+    }
+    else{
+      noPhoneAlrt.classList.add('d-none')
+    }
+   
 
     phones.forEach(phone =>{      
        const phoneDiv = document.createElement('div');
@@ -73,4 +79,4 @@ const toggleSpiner = isloading =>{
 }
 
 
-dataload()
+// dataload()
