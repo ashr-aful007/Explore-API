@@ -1,12 +1,12 @@
-const dataload = async () =>{
-     const url = `https://openapi.programming-hero.com/api/phones?search=iphone`
+const dataload = async (searchPhone) =>{
+     const url = `https://openapi.programming-hero.com/api/phones?search=${searchPhone}`
      const res = await fetch(url);
      const data = await res.json();
      displayData(data.data)
 }
 
 const displayData = phones =>{
-     console.log(phones)
+
     const phoneContaner = document.getElementById('phone-Contaner');
 
     phones.forEach(phone =>{
@@ -27,9 +27,18 @@ const displayData = phones =>{
     })
 }
 
+const searchInputText = () =>{
+     const inputFildText = document.getElementById('input-fildText');
+     const searchText = inputFildText.value;
+     dataload(searchText)
+     
+  }
 
 
+document.getElementById('search-input').addEventListener('click', function(){
+     searchInputText()
 
+})
 
 
 
