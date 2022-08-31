@@ -12,7 +12,7 @@ const displayData = (phones,dataLimit )=>{
     const phoneContaner = document.getElementById('phone-Contaner');
     phoneContaner.innerText = '';
 
-
+//viw all button
     const vewAllbtn = document.getElementById('vew-all-btn');
     if(dataLimit && phones.length > 10){
       phones = phones.slice(0, 10);
@@ -51,7 +51,7 @@ const displayData = (phones,dataLimit )=>{
     toggleSpiner(false)
 }
 
-
+//get data input fild
 const searchInputText = (dataLimit) =>{     
      const inputFildText = document.getElementById('input-fildText');    
      const searchText = inputFildText.value;
@@ -60,13 +60,14 @@ const searchInputText = (dataLimit) =>{
      
   }
 
-
+//enent for input fild 
 document.getElementById('search-input').addEventListener('click', function(){
   toggleSpiner(true)
      searchInputText(10)
 
 })
 
+//function for keypress event
 document.getElementById('input-fildText').addEventListener('keypress', function(event){
   
    if(event.key === 'Enter'){
