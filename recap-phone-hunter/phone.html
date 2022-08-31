@@ -12,11 +12,18 @@
     </header>
     <section>
      <div class="d-flex align-items-center justify-content-center mt-3">
-     <div class="input-group input-group-sm mb-3 w-25 text-center">      
+      <div class="input-group input-group-sm mb-3 w-25 text-center">      
        <input id="input-fildText" type="text" class="form-control " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
        <button id="search-input" class="btn btn-primary">Search</button>
-     </div>
+       </div>
      </div>     
+    </section>
+    <section id="loader" class="d-none">
+      <div style="height: 400px;" class="d-flex justify-content-center  align-items-center">
+        <div class="spinner-border text-info " role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
     </section>
     <!-- phone container section -->
     <section class="container mt-5">
@@ -32,10 +39,9 @@
       </div> -->
           </div>
     </section>
-
-
-
-
+    <section id="no-phoneAlrt" class="d-none">
+        <h3 class="text-primary text-center">No phone pound</h3>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="js/phone.js"></script>
   </body>
