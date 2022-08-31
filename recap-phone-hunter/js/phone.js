@@ -12,10 +12,17 @@ const displayData = phones =>{
     const phoneContaner = document.getElementById('phone-Contaner');
     phoneContaner.innerText = '';
 
-    phones = phones.slice(0, 10);
 
+    const vewAllbtn = document.getElementById('vew-all-btn');
+    if(phones.length > 10){
+      phones = phones.slice(0, 10);
+      vewAllbtn.classList.remove('d-none')
+    }
+    else{
+      vewAllbtn.classList.add('d-none')
+    }
 
-    //no phone found
+    //no phone found massege
     const noPhoneAlrt = document.getElementById('no-phoneAlrt');
       if(phones.length === 0){
       noPhoneAlrt.classList.remove('d-none')
