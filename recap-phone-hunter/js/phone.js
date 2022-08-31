@@ -102,13 +102,13 @@ const toggleSpiner = isloading =>{
  }
 
  const displayPhoneDitails = phone =>{
-  console.log(phone)
       const modaltital = document.getElementById('exampleModalLabel')
       modaltital.innerText = phone.name;
 
       const phoneDetails = document.getElementById('phone-details');
       phoneDetails.innerHTML = `
-         <p>Relese Date:${phone.releaseDate ? phone.releaseDate : 'No relise date'}</p>   
+         <p>Relese Date:${phone.releaseDate ? phone.releaseDate : 'No relise date'}</p>
+         <p>deatil${phone.mainFeatures.memory ? phone.mainFeatures.memory : 'memory not pound'}</p>   
       `
  }
  
